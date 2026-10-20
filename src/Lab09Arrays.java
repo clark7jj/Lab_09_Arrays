@@ -15,6 +15,7 @@ public class Lab09Arrays
         {
             System.out.println(dataPoints[i]);
         }
+
         for (int i = 0; i < dataPoints.length; i++)
         {
             System.out.print(dataPoints[i]);
@@ -24,5 +25,13 @@ public class Lab09Arrays
             }
         }
         System.out.println();
+        int sum = 0;
+        for(int i = 0; i < dataPoints.length; i++)
+        {
+            sum += dataPoints[i];
+        }
+        double average = (double) sum/dataPoints.length;
+        System.out.println("The sum of the random array dataPoints is: " + sum);
+        System.out.println("The average of the random array dataPoints is: " + average);
     }
 }
