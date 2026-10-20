@@ -7,7 +7,7 @@ public class Lab09Arrays
         Random rnd = new Random();
         int[] dataPoints = new int[100];
 
-        for(int i = 0; i < dataPoints.length; i++)
+        for (int i = 0; i < dataPoints.length; i++)
         {
             dataPoints[i] = rnd.nextInt(100) + 1;
         }
@@ -15,6 +15,14 @@ public class Lab09Arrays
         {
             System.out.println(dataPoints[i]);
         }
-
+        for (int i = 0; i < dataPoints.length; i++)
+        {
+            System.out.print(dataPoints[i]);
+            if (i < dataPoints.length - 1)
+            {
+                System.out.printf(" | ");
+            }
+        }
+        System.out.println();
     }
 }
