@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Lab09Arrays
 {
@@ -47,5 +48,21 @@ public class Lab09Arrays
             }
         }
         System.out.println("The value " + userNum + " was found " + count + " times in the dataPoints array.");
+
+        int searchValue = SafeInput.getRangedInt(pipe,"Enter another integer between 1 and 100", 1, 100);
+        boolean found = false;
+        for(int i = 0; i < dataPoints.length; i++)
+        {
+            if (dataPoints [i] == searchValue)
+            {
+                found = true;
+                System.out.println("The value " + searchValue  + " was found at array index " + i + ".");
+                break;
+            }
+        }
+        if (!found)
+        {
+            System.out.println("The value " + searchValue  + " was not found in the dataPoints array.");
+        }
     }
 }
