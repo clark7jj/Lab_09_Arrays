@@ -38,6 +38,14 @@ public class Lab09Arrays
         Scanner pipe = new Scanner (System.in);
         int userNum = SafeInput.getRangedInt(pipe, "Enter an integer between 1 and 100", 1, 100);
 
-
+        int count = 0;
+        for(int i = 0; i < dataPoints.length; i++)
+        {
+            if (dataPoints[i] == userNum)
+            {
+                count++;
+            }
+        }
+        System.out.println("The value " + userNum + " was found " + count + " times in the dataPoints array.");
     }
 }
