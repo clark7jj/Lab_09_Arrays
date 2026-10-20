@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Arrays;
+
 
 public class Lab09Arrays
 {
@@ -38,7 +38,6 @@ public class Lab09Arrays
 
         Scanner pipe = new Scanner (System.in);
         int userNum = SafeInput.getRangedInt(pipe, "Enter an integer between 1 and 100", 1, 100);
-
         int count = 0;
         for(int i = 0; i < dataPoints.length; i++)
         {
@@ -64,5 +63,22 @@ public class Lab09Arrays
         {
             System.out.println("The value " + searchValue  + " was not found in the dataPoints array.");
         }
+
+        int min = dataPoints[0];
+        int max = dataPoints [0];
+        for(int i = 1; i < dataPoints.length; i++)
+        {
+            if (dataPoints [i] < min)
+            {
+                min = dataPoints[i];
+            }
+            if (dataPoints[i] > max)
+            {
+                max = dataPoints[i];
+            }
+            }
+        System.out.println("The minimum value in dataPoints is: " + min);
+        System.out.println("The maximum value in dataPoints is: " + max);
+
     }
 }
