@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Lab09Arrays
 {
@@ -33,5 +34,10 @@ public class Lab09Arrays
         double average = (double) sum/dataPoints.length;
         System.out.println("The sum of the random array dataPoints is: " + sum);
         System.out.println("The average of the random array dataPoints is: " + average);
+
+        Scanner pipe = new Scanner (System.in);
+        int userNum = SafeInput.getRangedInt(pipe, "Enter an integer between 1 and 100", 1, 100);
+
+
     }
 }
